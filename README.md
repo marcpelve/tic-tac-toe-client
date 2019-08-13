@@ -7,9 +7,6 @@
 
 ### Documentation
 
-Produce documentation in the form of a **README**, which must:
-
-1.  [ ] Pin your repository on GitHub as a Popular Repository
 1.  [ ] Complete the repository `Description` field and `Website` field with a meaningful sentence description of the application and link to the live URL
 ![github image](https://git.generalassemb.ly/storage/user/3667/files/beae41ae-aaaa-11e7-8867-63958d376a0b)
 1.  [ ] List technologies used
