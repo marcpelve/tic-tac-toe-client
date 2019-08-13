@@ -7,12 +7,22 @@
 
 ### Documentation
 
-1.  [ ] Complete the repository `Description` field and `Website` field with a meaningful sentence description of the application and link to the live URL
-![github image](https://git.generalassemb.ly/storage/user/3667/files/beae41ae-aaaa-11e7-8867-63958d376a0b)
 1.  [ ] List technologies used
 1.  [ ] Document your planning and tell a story about your development process and problem-solving strategy.
 1.  [ ] List unsolved problems which would be fixed in future iterations.
 1.  [ ] Link to wireframes and user stories.
+
+As a user, I can sign up.
+As a user, if I am not logged in, I should not see elements that shouldn't be available to me.
+As a user, I can log in.
+As a user, when I am logged in, I can start a new game.
+As a user, when I start a new game, I see an empty game board.
+As a user, when I start a new game, I should be player 'X'.
+As a user, after I click an empty square, it should display my 'mark'.
+As a user, after I click an empty square, I should switch to the next player.
+As a user, after 3 marks in a row, the player should win.
+As a user, after no empty squares and no winners, I should tie.
+
 
 ### Technical Specifications
 
