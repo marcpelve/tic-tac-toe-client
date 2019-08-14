@@ -3,6 +3,7 @@
 $alt-color: $white;
 $body-bg-color: $gray-200;
 $font-color: $dark;
+$black: #000;
 
 body {
   background-color: $body-bg-color;
@@ -23,5 +24,13 @@ body {
 }
 
 .black {
-  background-color: #000;
+  background-color: $black;
+}
+
+.success {
+  border: 3px solid green;
+}
+
+.failure {
+  border: 3px solid red;
 }
