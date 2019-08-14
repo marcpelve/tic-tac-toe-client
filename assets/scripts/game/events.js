@@ -2,11 +2,15 @@
 
 const api = require('./api')
 const ui = require('./ui')
-const store = require('./../config')
+const store = require('./../store')
 
 const onNewGame = event => {
   event.preventDefault()
-  console.log('submitted new game')
+  console.log('submitted new game', store)
+
+  store.boardStatus = {}
+  store.boardStatus.isOver = false
+  store.boardStatus.currentPlayer = 'x'
 
   api.newGame()
     .then(ui.newGameSuccess)
@@ -16,7 +20,11 @@ const onNewGame = event => {
 const onClickGame = event => {
   const tile = event.target
   const tileIndex = $(tile).data('index')
-  store.currentClickedIndex = tileIndex
+  store.boardStatus.currentClickedIndex = tileIndex
+
+  api.updateGame()
+    .then(ui.updateGameSuccess(tile))
+    .catch(ui.failure)
 }
 
 module.exports = {
