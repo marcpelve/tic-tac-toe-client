@@ -26,6 +26,7 @@ As a user, I should be able to play with no interruptions in the page.
 As a user, I should be able to retreive game history.
 As a user, I should be able to log out.
 As a user, I should be able to change my password.
+As a user, after the game is over I should not be able to keep clicking.
 
 
 ### Technical Specifications
