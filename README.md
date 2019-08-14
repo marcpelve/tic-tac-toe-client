@@ -20,8 +20,12 @@ As a user, when I start a new game, I see an empty game board.
 As a user, when I start a new game, I should be player 'X'.
 As a user, after I click an empty square, it should display my 'mark'.
 As a user, after I click an empty square, I should switch to the next player.
-As a user, after 3 marks in a row, the player should win.
+As a user, after 3 marks in a row, the player should win and receive prompt.
 As a user, after no empty squares and no winners, I should tie.
+As a user, I should be able to play with no interruptions in the page.
+As a user, I should be able to retreive game history.
+As a user, I should be able to log out.
+As a user, I should be able to change my password.
 
 
 ### Technical Specifications
