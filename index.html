@@ -15,11 +15,11 @@
       <h1>Tic-Tac-Toe</h1>
       <section>
         <div id='message'></div>
-        <button id="sign-out" class="border">Sign Out</button>
+        <button id="sign-out" class="border toggle-on-sign-in" data-show="false">Sign Out</button>
         <div id='signed-in-user'></div>
       </section>
 
-      <form id='sign-up' class='border'>
+      <form id='sign-up' class='border' data-show="true">
         <fieldset>
           <legend>Sign up</legend>
           <input type="text" name="credentials[email]" placeholder="Email">
@@ -29,7 +29,7 @@
         </fieldset>
       </form>
 
-      <form id='sign-in' class='border'>
+      <form id='sign-in' class="border" data-show="true">
         <fieldset>
           <legend>Sign in</legend>
           <input type="text" name="credentials[email]" placeholder="Email">
@@ -38,7 +38,7 @@
         </fieldset>
       </form>
 
-      <form id='change-password' class='border'>
+      <form id='change-password' class='border toggle-on-sign-in' data-show="false">
         <fieldset>
           <legend>Change password</legend>
           <input type="password" name="passwords[old]" placeholder="Current password">
@@ -49,11 +49,11 @@
 
       <br>
 
-      <button id="new-game" type="button" class="btn btn-success">New Game</button>
-      <button id="get-data" type="button" class="btn btn-secondary">Get Data</button>
-      <div id="data-message"></div>
+      <button id="new-game" type="button" class="btn btn-success toggle-on-sign-in" data-show="false">New Game</button>
+      <button id="get-data" type="button" class="btn btn-secondary toggle-on-sign-in" data-show="false">Get Data</button>
+      <div id="data-message" class="inline-div"></div>
 
-      <div id="game-board" class="container">
+      <div id="game-board" class="container toggle-on-sign-in" data-show="false">
         <div class="row">
           <div data-index="0" data-editable="true" class="col-4 box alt-color"></div>
           <div data-index="1" data-editable="true" class="col-4 box alt-color"></div>

@@ -9,6 +9,10 @@ body {
   background-color: $body-bg-color;
 }
 
+.toggle-on-sign-in {
+  visibility: hidden;
+}
+
 .box {
   align-items: center;
   background-color: $secondary;
@@ -33,4 +37,8 @@ body {
 
 .failure {
   border: 3px solid red;
+}
+
+.inline-div {
+  display: inline-block;
 }

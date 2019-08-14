@@ -67,6 +67,16 @@ const updateGameSuccess = data => {
   }
 }
 
+const getDataSuccess = data => {
+  $('#message').text('Successfully retrieved games.')
+  $('#message').removeClass()
+  $('#message').addClass('success')
+  console.log('getDataSuccess ran', data)
+  $('#data-message').text(`${data.games.length} games played.`)
+
+  $('form').trigger('reset')
+}
+
 const failure = data => {
   $('#message').text('Operation error')
   $('#message').removeClass()
@@ -79,5 +89,6 @@ const failure = data => {
 module.exports = {
   newGameSuccess,
   updateGameSuccess,
+  getDataSuccess,
   failure
 }
