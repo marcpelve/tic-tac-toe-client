@@ -2,7 +2,7 @@
 
 const api = require('./api')
 const ui = require('./ui')
-// const store = require('./../config')
+const store = require('./../config')
 
 const onNewGame = event => {
   event.preventDefault()
@@ -13,6 +13,13 @@ const onNewGame = event => {
     .catch(ui.failure)
 }
 
+const onClickGame = event => {
+  const tile = event.target
+  const tileIndex = $(tile).data('index')
+  store.currentClickedIndex = tileIndex
+}
+
 module.exports = {
-  onNewGame
+  onNewGame,
+  onClickGame
 }
