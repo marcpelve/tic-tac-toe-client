@@ -2,6 +2,7 @@
 
 const api = require('./api')
 const ui = require('./ui')
+// const store = require('./../config')
 
 const onNewGame = event => {
   event.preventDefault()

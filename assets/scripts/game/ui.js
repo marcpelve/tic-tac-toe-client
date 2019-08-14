@@ -1,10 +1,11 @@
 'use strict'
 
-// const store = require('./../store')
+const store = require('./../store')
 // const api = require('./api')
 
 const newGameSuccess = data => {
-  console.log(data)
+  store.game = data
+  console.log('check store game, store', store.game, store)
   $('#message').text('Successfully created new game.')
   $('#message').removeClass()
   $('#message').addClass('success')
