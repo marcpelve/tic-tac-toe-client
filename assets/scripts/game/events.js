@@ -8,10 +8,6 @@ const onNewGame = event => {
   event.preventDefault()
   console.log('submitted new game', store)
 
-  store.boardStatus = {}
-  store.boardStatus.isOver = false
-  store.boardStatus.currentPlayer = 'x'
-
   api.newGame()
     .then(ui.newGameSuccess)
     .catch(ui.failure)
@@ -27,7 +23,16 @@ const onClickGame = event => {
     .catch(ui.failure)
 }
 
+const onGetData = event => {
+  console.log('clicked get data')
+
+  api.getData()
+    .then(ui.getDataSuccess)
+    .catch(ui.failure)
+}
+
 module.exports = {
   onNewGame,
-  onClickGame
+  onClickGame,
+  onGetData
 }

@@ -17,4 +17,5 @@ $(() => {
 
   $('#new-game').on('click', gameEvents.onNewGame)
   $('#game-board').on('click', gameEvents.onClickGame)
+  $('#get-data').on('click', gameEvents.onGetData)
 })
