@@ -1,72 +1,108 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <title>Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>Tic-Tac-Toe</h1>
-      <section>
-        <div id='message'></div>
-        <button id="sign-out" class="border toggle-on-sign-in" data-show="false">Sign Out</button>
-        <div id='signed-in-user'></div>
-      </section>
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+<body>
+  <h1>Tic-Tac-Toe</h1>
+  <h6>By Marc Pelve</h6>
+  <section>
+    <br>
 
-      <form id='sign-up' class='border toggle-off-sign-in' data-show="true">
-        <fieldset>
-          <legend>Sign up</legend>
-          <input type="text" name="credentials[email]" placeholder="Email">
-          <input type="password" name="credentials[password]" placeholder="Password">
-          <input type="password" name="credentials[password_confirmation]" placeholder="Confirm password">
-          <input type="submit" value="Sign up">
-        </fieldset>
-      </form>
+    <div id='message' class=""></div>
 
-      <form id='sign-in' class="border toggle-off-sign-in" data-show="true">
-        <fieldset>
-          <legend>Sign in</legend>
-          <input type="text" name="credentials[email]" placeholder="Email">
-          <input type="password" name="credentials[password]" placeholder="Password">
-          <input type="submit" value="Sign in">
-        </fieldset>
-      </form>
+    <br>
 
-      <form id='change-password' class='border toggle-on-sign-in' data-show="false">
-        <fieldset>
-          <legend>Change password</legend>
-          <input type="password" name="passwords[old]" placeholder="Current password">
-          <input type="password" name="passwords[new]" placeholder="New password">
-          <input type="submit" value="Change password">
-        </fieldset>
-      </form>
+    <div class="spacer">
+      <div id='signed-in-user' class="inline-div"></div>
+      <button id="sign-out" type="button" class="btn btn-secondary toggle-on-sign-in" data-show="false">Sign Out</button>
+    </div>
 
-      <br>
 
-      <button id="new-game" type="button" class="btn btn-success toggle-on-sign-in" data-show="false">New Game</button>
-      <button id="get-data" type="button" class="btn btn-secondary toggle-on-sign-in" data-show="false">Get Data</button>
-      <div id="data-message" class="inline-div toggle-on-sign-in"></div>
+  </section>
 
-      <div id="game-board" class="container toggle-on-new-game" data-show="false">
-        <div class="row">
-          <div data-index="0" data-editable="true" class="col-4 box alt-color"></div>
-          <div data-index="1" data-editable="true" class="col-4 box alt-color"></div>
-          <div data-index="2" data-editable="true" class="col-4 box alt-color"></div>
-          <div data-index="3" data-editable="true" class="col-4 box alt-color"></div>
-          <div data-index="4" data-editable="true" class="col-4 box alt-color"></div>
-          <div data-index="5" data-editable="true" class="col-4 box alt-color"></div>
-          <div data-index="6" data-editable="true" class="col-4 box alt-color"></div>
-          <div data-index="7" data-editable="true" class="col-4 box alt-color"></div>
-          <div data-index="8" data-editable="true" class="col-4 box alt-color"></div>
-        </div>
+  <div id="sign-up-in" class="row justify-content-center">
+    <form id='sign-up' class='col-5 form-group border toggle-off-sign-in' data-show="true">
+      <fieldset>
+        <legend>Sign up</legend>
 
-      </div>
+        <label for="inputEmail">Email address</label>
+        <input type="text" name="credentials[email]" class="form-control" placeholder="Email">
+        <small id="emailHelp" class="form-text text-muted">Do not use a real Email/PW, this is not secure.</small>
+        <br>
 
-    </body>
+        <label for="password">Password</label>
+        <input type="password" name="credentials[password]" class="form-control" placeholder="Password">
+        <br>
+
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" name="credentials[password_confirmation]" class="form-control" placeholder="Confirm password">
+        <br>
+
+        <input type="submit" class="btn btn-primary" value="Sign up">
+        <br>
+        <br>
+
+      </fieldset>
+    </form>
+
+    <form id='sign-in' class="col-5 form-group border toggle-off-sign-in" data-show="true">
+      <fieldset>
+        <legend>Sign in</legend>
+
+        <label for="inputEmail">Email address</label>
+        <input type="text" name="credentials[email]" class="form-control" placeholder="Email">
+        <br>
+
+        <label for="password">Password</label>
+        <input type="password" name="credentials[password]" class="form-control" placeholder="Password">
+        <br>
+
+        <input type="submit" class="btn btn-primary" value="Sign in">
+      </fieldset>
+    </form>
+  </div>
+
+  <form id='change-password' class='border toggle-on-sign-in' data-show="false">
+    <fieldset>
+      <legend>Change password</legend>
+      <input type="password" name="passwords[old]" placeholder="Current password">
+      <input type="password" name="passwords[new]" placeholder="New password">
+      <input type="submit" value="Change password">
+    </fieldset>
+  </form>
+
+  <br>
+
+  <button id="new-game" type="button" class="btn btn-success toggle-on-sign-in" data-show="false">New Game</button>
+  <button id="get-data" type="button" class="btn btn-secondary toggle-on-sign-in" data-show="false">Get Data</button>
+  <div id="data-message" class="inline-div toggle-on-sign-in"></div>
+
+  <div id="game-board" class="container toggle-on-new-game" data-show="false">
+    <div class="row">
+      <div data-index="0" data-editable="true" class="col-4 box alt-color"></div>
+      <div data-index="1" data-editable="true" class="col-4 box alt-color"></div>
+      <div data-index="2" data-editable="true" class="col-4 box alt-color"></div>
+      <div data-index="3" data-editable="true" class="col-4 box alt-color"></div>
+      <div data-index="4" data-editable="true" class="col-4 box alt-color"></div>
+      <div data-index="5" data-editable="true" class="col-4 box alt-color"></div>
+      <div data-index="6" data-editable="true" class="col-4 box alt-color"></div>
+      <div data-index="7" data-editable="true" class="col-4 box alt-color"></div>
+      <div data-index="8" data-editable="true" class="col-4 box alt-color"></div>
+    </div>
+
+  </div>
+
+  <br>
+  <br>
+
+</body>
 </html>

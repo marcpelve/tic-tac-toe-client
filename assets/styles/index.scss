@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Lexend+Mega&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 @import '~bootstrap/scss/bootstrap';
 
 $alt-color: $white;
@@ -5,30 +8,28 @@ $body-bg-color: $gray-200;
 $font-color: $dark;
 $black: #000;
 
+* {
+  padding-left: 5px;
+  font-family: 'Montserrat', sans-serif;
+}
+
 body {
   background-color: $body-bg-color;
 }
 
-.toggle-on-sign-in {
-  visibility: hidden;
+h1, h6 {
+  text-align: center;
+  margin-top: 10px;
 }
 
-.toggle-on-new-game {
-  visibility: hidden;
+input {
+  margin-top: 3px;
 }
 
-.toggle-off-sign-in {
-  visibility: visible;
-}
-
-.box {
-  align-items: center;
-  background-color: $secondary;
-  border: 1px solid $black;
-  color: $font-color;
-  display: flex;
-  height: 80px;
-  justify-content: center;
+#message {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .alt-color {
@@ -39,8 +40,15 @@ body {
   background-color: $black;
 }
 
-.success {
-  border: 3px solid green;
+.box {
+  align-items: center;
+  background-color: $secondary;
+  border: 1px solid $black;
+  color: $font-color;
+  display: flex;
+  font-size: 60px;
+  height: 200px;
+  justify-content: center;
 }
 
 .failure {
@@ -49,4 +57,30 @@ body {
 
 .inline-div {
   display: inline-block;
+}
+
+.spacer {
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
+}
+
+.spacer > * {
+  margin-left: 10px;
+}
+
+.success {
+  border: 3px solid green;
+}
+
+.toggle-off-sign-in {
+  visibility: visible;
+}
+
+.toggle-on-sign-in {
+  visibility: hidden;
+}
+
+.toggle-on-new-game {
+  visibility: hidden;
 }

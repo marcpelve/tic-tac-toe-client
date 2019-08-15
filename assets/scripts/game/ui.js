@@ -21,7 +21,7 @@ const newGameSuccess = data => {
   console.log('check store game, store', store.currentGame, store)
   $('#message').text('Successfully created new game.')
   $('#message').removeClass()
-  $('#message').addClass('success')
+  $('#message').addClass('alert alert-primary')
   console.log('newGameSuccess ran', data)
 
   $('.toggle-on-new-game').css('visibility', 'visible')
@@ -44,7 +44,7 @@ const updateGameSuccess = data => {
       $('#message').text(`Tile ${store.boardStatus.currentClickedIndex + 1} registered with your mark.
         You are now player ${store.boardStatus.currentPlayer}`)
       $('#message').removeClass()
-      $('#message').addClass('success')
+      $('#message').addClass('alert alert-primary')
       $(data).data('editable', 'false')
       const state = gameLogic.checkBoard()
 
@@ -52,33 +52,33 @@ const updateGameSuccess = data => {
         if (store.boardStatus.currentPlayer === 'x') {
           $('#message').text('Player O won!')
           $('#message').removeClass()
-          $('#message').addClass('success')
+          $('#message').addClass('alert alert-primary')
         } else {
           $('#message').text('Player X won!')
           $('#message').removeClass()
-          $('#message').addClass('success')
+          $('#message').addClass('alert alert-primary')
         }
       } else if (state === 'draw') {
         $('#message').text('Draw!')
         $('#message').removeClass()
-        $('#message').addClass('failure')
+        $('#message').addClass('alert alert-danger')
       }
     } else {
       $('#message').text('Tile already taken')
       $('#message').removeClass()
-      $('#message').addClass('failure')
+      $('#message').addClass('alert alert-danger')
     }
   } else {
     $('#message').text('Game is over! Start new game')
     $('#message').removeClass()
-    $('#message').addClass('failure')
+    $('#message').addClass('alert alert-danger')
   }
 }
 
 const getDataSuccess = data => {
   $('#message').text('Successfully retrieved games.')
   $('#message').removeClass()
-  $('#message').addClass('success')
+  $('#message').addClass('alert alert-primary')
   console.log('getDataSuccess ran', data)
   $('#data-message').text(`${data.games.length} games played.`)
 
@@ -88,7 +88,7 @@ const getDataSuccess = data => {
 const failure = data => {
   $('#message').text('Operation error')
   $('#message').removeClass()
-  $('#message').addClass('failure')
+  $('#message').addClass('alert alert-danger')
   console.error('failure ran', data)
 
   $('form').trigger('reset')

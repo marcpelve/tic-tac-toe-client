@@ -15,7 +15,9 @@ const onNewGame = event => {
 
 const onClickGame = event => {
   const tile = event.target
+  console.log(tile)
   const tileIndex = $(tile).data('index')
+  console.log(tileIndex)
   store.boardStatus.currentClickedIndex = tileIndex
 
   api.updateGame()

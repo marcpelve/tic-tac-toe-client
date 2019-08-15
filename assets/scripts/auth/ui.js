@@ -5,7 +5,7 @@ const store = require('./../store')
 const signUpSuccess = data => {
   $('#message').text('Successfully signed up.')
   $('#message').removeClass()
-  $('#message').addClass('success')
+  $('#message').addClass('alert alert-primary')
   console.log('signUpSuccess ran')
 
   $('form').trigger('reset')
@@ -16,7 +16,7 @@ const signInSuccess = data => {
 
   $('#message').text('Successfully signed in.')
   $('#message').removeClass()
-  $('#message').addClass('success')
+  $('#message').addClass('alert alert-primary')
   console.log('signInSuccess ran. User is', store.user)
 
   $('#signed-in-user').text('User: ' + store.user.email)
@@ -30,7 +30,7 @@ const signInSuccess = data => {
 const changePasswordSuccess = data => {
   $('#message').text('Successfully changed password.')
   $('#message').removeClass()
-  $('#message').addClass('success')
+  $('#message').addClass('alert alert-primary')
   console.log('changePasswordSuccess ran')
 
   $('form').trigger('reset')
@@ -40,7 +40,7 @@ const signOutSuccess = data => {
   store.user = null
   $('#message').text('Successfully signed out.')
   $('#message').removeClass()
-  $('#message').addClass('success')
+  $('#message').addClass('alert alert-primary')
   console.log('signOutSuccess ran')
 
   $('#signed-in-user').text('')
@@ -55,7 +55,7 @@ const signOutSuccess = data => {
 const failure = data => {
   $('#message').text('Operation error')
   $('#message').removeClass()
-  $('#message').addClass('failure')
+  $('#message').addClass('alert alert-danger')
   console.error('failure ran')
 
   $('form').trigger('reset')
