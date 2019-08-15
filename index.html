@@ -19,7 +19,7 @@
         <div id='signed-in-user'></div>
       </section>
 
-      <form id='sign-up' class='border' data-show="true">
+      <form id='sign-up' class='border toggle-off-sign-in' data-show="true">
         <fieldset>
           <legend>Sign up</legend>
           <input type="text" name="credentials[email]" placeholder="Email">
@@ -29,7 +29,7 @@
         </fieldset>
       </form>
 
-      <form id='sign-in' class="border" data-show="true">
+      <form id='sign-in' class="border toggle-off-sign-in" data-show="true">
         <fieldset>
           <legend>Sign in</legend>
           <input type="text" name="credentials[email]" placeholder="Email">
@@ -51,9 +51,9 @@
 
       <button id="new-game" type="button" class="btn btn-success toggle-on-sign-in" data-show="false">New Game</button>
       <button id="get-data" type="button" class="btn btn-secondary toggle-on-sign-in" data-show="false">Get Data</button>
-      <div id="data-message" class="inline-div"></div>
+      <div id="data-message" class="inline-div toggle-on-sign-in"></div>
 
-      <div id="game-board" class="container toggle-on-sign-in" data-show="false">
+      <div id="game-board" class="container toggle-on-new-game" data-show="false">
         <div class="row">
           <div data-index="0" data-editable="true" class="col-4 box alt-color"></div>
           <div data-index="1" data-editable="true" class="col-4 box alt-color"></div>

@@ -13,6 +13,14 @@ body {
   visibility: hidden;
 }
 
+.toggle-on-new-game {
+  visibility: hidden;
+}
+
+.toggle-off-sign-in {
+  visibility: visible;
+}
+
 .box {
   align-items: center;
   background-color: $secondary;

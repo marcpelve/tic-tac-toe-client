@@ -24,6 +24,8 @@ const newGameSuccess = data => {
   $('#message').addClass('success')
   console.log('newGameSuccess ran', data)
 
+  $('.toggle-on-new-game').css('visibility', 'visible')
+
   $('form').trigger('reset')
 }
 

@@ -22,6 +22,7 @@ const signInSuccess = data => {
   $('#signed-in-user').text('User: ' + store.user.email)
 
   $('.toggle-on-sign-in').css('visibility', 'visible')
+  $('.toggle-off-sign-in').css('visibility', 'hidden')
 
   $('form').trigger('reset')
 }
@@ -45,6 +46,8 @@ const signOutSuccess = data => {
   $('#signed-in-user').text('')
 
   $('.toggle-on-sign-in').css('visibility', 'hidden')
+  $('.toggle-on-new-game').css('visibility', 'hidden')
+  $('.toggle-off-sign-in').css('visibility', 'visible')
 
   $('form').trigger('reset')
 }
