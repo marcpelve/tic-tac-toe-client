@@ -49,9 +49,15 @@ const updateGameSuccess = data => {
       const state = gameLogic.checkBoard()
 
       if (state === 'victory') {
-        $('#message').text('Victory!')
-        $('#message').removeClass()
-        $('#message').addClass('success')
+        if (store.boardStatus.currentPlayer === 'x') {
+          $('#message').text('Player O won!')
+          $('#message').removeClass()
+          $('#message').addClass('success')
+        } else {
+          $('#message').text('Player X won!')
+          $('#message').removeClass()
+          $('#message').addClass('success')
+        }
       } else if (state === 'draw') {
         $('#message').text('Draw!')
         $('#message').removeClass()
