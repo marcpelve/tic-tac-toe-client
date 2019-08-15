@@ -32,21 +32,21 @@ There are no specific unsolved problems, however a list of upgrades that can be 
 
   ## User Stories
 
-  As a user, I can sign up.
-  As a user, if I am not logged in, I should not see elements that shouldn't be available to me.
-  As a user, I can log in.
-  As a user, when I am logged in, I can start a new game.
-  As a user, when I start a new game, I see an empty game board.
-  As a user, when I start a new game, I should be player 'X'.
-  As a user, after I click an empty square, it should display my 'mark'.
-  As a user, after I click an empty square, I should switch to the next player.
-  As a user, after 3 marks in a row, the player should win and receive prompt.
-  As a user, after no empty squares and no winners, I should tie.
-  As a user, I should be able to play with no interruptions in the page.
-  As a user, I should be able to retreive game history.
-  As a user, I should be able to log out.
-  As a user, I should be able to change my password.
-  As a user, after the game is over I should not be able to keep clicking.
+  - As a user, I can sign up.
+  - As a user, if I am not logged in, I should not see elements that shouldn't be available to me.
+  - As a user, I can log in.
+  - As a user, when I am logged in, I can start a new game.
+  - As a user, when I start a new game, I see an empty game board.
+  - As a user, when I start a new game, I should be player 'X'.
+  - As a user, after I click an empty square, it should display my 'mark'.
+  - As a user, after I click an empty square, I should switch to the next player.
+  - As a user, after 3 marks in a row, the player should win and receive prompt.
+  - As a user, after no empty squares and no winners, I should tie.
+  - As a user, I should be able to play with no interruptions in the page.
+  - As a user, I should be able to retreive game history.
+  - As a user, I should be able to log out.
+  - As a user, I should be able to change my password.
+  - As a user, after the game is over I should not be able to keep clicking.
 
   ## Wireframes
 
