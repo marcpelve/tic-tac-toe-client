@@ -29,12 +29,20 @@ const changePasswordSuccess = data => {
   $('form').trigger('reset')
 }
 
+const changePasswordFailure = data => {
+  messages.changeMessage('Failure to change password', 'alert alert-danger')
+
+  $('#modal-message').text('Failure to change password')
+  $('#modal-message').show().delay(5000).fadeOut()
+}
+
 const signOutSuccess = data => {
   store.user = null
 
   messages.changeMessage('Successfully signed out.', 'alert alert-primary')
 
   $('#signed-in-user').text('')
+  $('#data-message').text('')
   $('.toggle-on-sign-in').hide()
   $('.toggle-on-new-game').hide()
   $('.toggle-off-sign-in').show()
@@ -52,6 +60,7 @@ module.exports = {
   signUpSuccess,
   signInSuccess,
   changePasswordSuccess,
+  changePasswordFailure,
   signOutSuccess,
   failure
 }

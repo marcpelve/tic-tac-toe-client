@@ -18,10 +18,14 @@ const onClickGame = event => {
   const tileIndex = $(tile).data('index')
   store.boardStatus.currentClickedIndex = tileIndex
 
-  if (($(tile).data('editable') === 'true') && !store.boardStatus.isOver) {
-    api.updateGame()
-      .then(ui.updateGameSuccess(tile))
-      .catch(ui.failure)
+  if (!store.boardStatus.isOver) {
+    if ($(tile).data('editable') === 'true') {
+      api.updateGame()
+        .then(ui.updateGameSuccess(tile))
+        .catch(ui.failure)
+    } else {
+      messages.changeMessage('Tile is already taken, please select another', 'alert alert-danger')
+    }
   } else {
     messages.changeMessage('Game over, start new game', 'alert alert-warning')
   }
