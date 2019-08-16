@@ -4,7 +4,6 @@ const store = require('./../store')
 
 const updateBoard = data => {
   store.boardStatus.cells[data] = store.boardStatus.currentPlayer
-  console.log(store.boardStatus.cells)
 }
 
 const checkBoard = () => {
@@ -38,13 +37,11 @@ const checkBoard = () => {
 
 const victory = () => {
   store.boardStatus.isOver = true
-  console.log('victory')
   return 'victory'
 }
 
 const draw = () => {
   store.boardStatus.isOver = true
-  console.log('draw')
   return 'draw'
 }
 

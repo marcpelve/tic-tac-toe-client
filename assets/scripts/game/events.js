@@ -3,10 +3,10 @@
 const api = require('./api')
 const ui = require('./ui')
 const store = require('./../store')
+const messages = require('./messages')
 
 const onNewGame = event => {
   event.preventDefault()
-  console.log('submitted new game', store)
 
   api.newGame()
     .then(ui.newGameSuccess)
@@ -15,19 +15,19 @@ const onNewGame = event => {
 
 const onClickGame = event => {
   const tile = event.target
-  console.log(tile)
   const tileIndex = $(tile).data('index')
-  console.log(tileIndex)
   store.boardStatus.currentClickedIndex = tileIndex
 
-  api.updateGame()
-    .then(ui.updateGameSuccess(tile))
-    .catch(ui.failure)
+  if (($(tile).data('editable') === 'true') && !store.boardStatus.isOver) {
+    api.updateGame()
+      .then(ui.updateGameSuccess(tile))
+      .catch(ui.failure)
+  } else {
+    messages.changeMessage('Game over, start new game', 'alert alert-warning')
+  }
 }
 
 const onGetData = event => {
-  console.log('clicked get data')
-
   api.getData()
     .then(ui.getDataSuccess)
     .catch(ui.failure)

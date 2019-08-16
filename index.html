@@ -24,52 +24,46 @@
     <div class="spacer">
       <div id='signed-in-user' class="inline-div"></div>
 
-
-
-
       <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary toggle-on-sign-in" data-toggle="modal" data-target="#exampleModal">
-  Change Password
-</button>
+      <button type="button" class="btn btn-primary toggle-on-sign-in" data-toggle="modal" data-target="#exampleModal">
+        Change Password
+      </button>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id='change-password-modal' class='' data-show="false">
+                <fieldset>
+                  <label for="currentPassword">Current Password</label>
+                  <br>
+                  <input type="password" name="passwords[old]" placeholder="Current password">
+                  <br>
+                  <br>
+                  <label for="currentPassword">New Password</label>
+                  <br>
+                  <input type="password" name="passwords[new]" placeholder="New password">
+                  <br>
+                  <br>
+                  <hr>
+                  <input type="submit" class="btn btn-primary" value="Change password">
+                </fieldset>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <span id="modal-message"></span>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="modal-body">
-        <form id='change-password-modal' class='' data-show="false">
-          <fieldset>
-            <label for="currentPassword">Current Password</label>
-            <br>
-            <input type="password" name="passwords[old]" placeholder="Current password">
-            <br>
-            <br>
-            <label for="currentPassword">New Password</label>
-            <br>
-            <input type="password" name="passwords[new]" placeholder="New password">
-            <br>
-            <br>
-            <hr>
-            <input type="submit" class="btn btn-primary" value="Change password">
-          </fieldset>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
 
       <button id="sign-out" type="button" class="btn btn-secondary toggle-on-sign-in" data-show="false">Sign Out</button>
     </div>
@@ -119,38 +113,41 @@
     </form>
   </div>
 
-  <form id='change-password' class='border toggle-on-sign-in' data-show="false">
-    <fieldset>
-      <legend>Change password</legend>
-      <input type="password" name="passwords[old]" placeholder="Current password">
-      <input type="password" name="passwords[new]" placeholder="New password">
-      <input type="submit" value="Change password">
-    </fieldset>
-  </form>
+  <!-- <form id='change-password' class='border toggle-on-sign-in' data-show="false">
+  <fieldset>
+  <legend>Change password</legend>
+  <input type="password" name="passwords[old]" placeholder="Current password">
+  <input type="password" name="passwords[new]" placeholder="New password">
+  <input type="submit" value="Change password">
+</fieldset>
+</form> -->
 
-  <br>
-
+<br>
+<div class="row justify-content-center spacer">
   <button id="new-game" type="button" class="btn btn-success toggle-on-sign-in" data-show="false">New Game</button>
   <button id="get-data" type="button" class="btn btn-secondary toggle-on-sign-in" data-show="false">Get Data</button>
   <div id="data-message" class="inline-div toggle-on-sign-in"></div>
+</div>
+<br>
+<br>
 
-  <div id="game-board" class="container toggle-on-new-game" data-show="false">
-    <div class="row">
-      <div data-index="0" data-editable="true" class="col-4 box alt-color"></div>
-      <div data-index="1" data-editable="true" class="col-4 box alt-color"></div>
-      <div data-index="2" data-editable="true" class="col-4 box alt-color"></div>
-      <div data-index="3" data-editable="true" class="col-4 box alt-color"></div>
-      <div data-index="4" data-editable="true" class="col-4 box alt-color"></div>
-      <div data-index="5" data-editable="true" class="col-4 box alt-color"></div>
-      <div data-index="6" data-editable="true" class="col-4 box alt-color"></div>
-      <div data-index="7" data-editable="true" class="col-4 box alt-color"></div>
-      <div data-index="8" data-editable="true" class="col-4 box alt-color"></div>
-    </div>
-
+<div id="game-board" class="container toggle-on-new-game" data-show="false">
+  <div class="row">
+    <div data-index="0" data-editable="true" class="col-4 box alt-color"></div>
+    <div data-index="1" data-editable="true" class="col-4 box alt-color"></div>
+    <div data-index="2" data-editable="true" class="col-4 box alt-color"></div>
+    <div data-index="3" data-editable="true" class="col-4 box alt-color"></div>
+    <div data-index="4" data-editable="true" class="col-4 box alt-color"></div>
+    <div data-index="5" data-editable="true" class="col-4 box alt-color"></div>
+    <div data-index="6" data-editable="true" class="col-4 box alt-color"></div>
+    <div data-index="7" data-editable="true" class="col-4 box alt-color"></div>
+    <div data-index="8" data-editable="true" class="col-4 box alt-color"></div>
   </div>
 
-  <br>
-  <br>
+</div>
+
+<br>
+<br>
 
 </body>
 </html>

@@ -1,62 +1,49 @@
 'use strict'
 
 const store = require('./../store')
+const messages = require('./../game/messages')
 
-const signUpSuccess = data => {
-  $('#message').text('Successfully signed up.')
-  $('#message').removeClass()
-  $('#message').addClass('alert alert-primary')
-  console.log('signUpSuccess ran')
+const signUpSuccess = (data) => {
+  messages.changeMessage('Successfully signed up.', 'alert alert-primary')
 
   $('form').trigger('reset')
 }
 
 const signInSuccess = data => {
   store.user = data.user
-
-  $('#message').text('Successfully signed in.')
-  $('#message').removeClass()
-  $('#message').addClass('alert alert-primary')
-  console.log('signInSuccess ran. User is', store.user)
+  messages.changeMessage('Successfully signed in.', 'alert alert-primary')
 
   $('#signed-in-user').text('User: ' + store.user.email)
-
-  $('.toggle-on-sign-in').css('visibility', 'visible')
-  $('.toggle-off-sign-in').css('visibility', 'hidden')
+  $('.toggle-on-sign-in').show()
+  $('.toggle-off-sign-in').hide()
 
   $('form').trigger('reset')
 }
 
 const changePasswordSuccess = data => {
-  $('#message').text('Successfully changed password.')
-  $('#message').removeClass()
-  $('#message').addClass('alert alert-primary')
-  console.log('changePasswordSuccess ran')
+  messages.changeMessage('Successfully changed password', 'alert alert-primary')
+
+  $('#modal-message').text('Successfully changed password')
+  $('#modal-message').show().delay(5000).fadeOut()
 
   $('form').trigger('reset')
 }
 
 const signOutSuccess = data => {
   store.user = null
-  $('#message').text('Successfully signed out.')
-  $('#message').removeClass()
-  $('#message').addClass('alert alert-primary')
-  console.log('signOutSuccess ran')
+
+  messages.changeMessage('Successfully signed out.', 'alert alert-primary')
 
   $('#signed-in-user').text('')
-
-  $('.toggle-on-sign-in').css('visibility', 'hidden')
-  $('.toggle-on-new-game').css('visibility', 'hidden')
-  $('.toggle-off-sign-in').css('visibility', 'visible')
+  $('.toggle-on-sign-in').hide()
+  $('.toggle-on-new-game').hide()
+  $('.toggle-off-sign-in').show()
 
   $('form').trigger('reset')
 }
 
 const failure = data => {
-  $('#message').text('Operation error')
-  $('#message').removeClass()
-  $('#message').addClass('alert alert-danger')
-  console.error('failure ran')
+  messages.changeMessage('Operation error', 'alert alert-danger')
 
   $('form').trigger('reset')
 }
