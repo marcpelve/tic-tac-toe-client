@@ -10,7 +10,7 @@ For the most part my plan was executed according to plan, however there was some
 
 html, css, bootstrap, javascript, jQuery, JSON
 
-Ajax, GruntJS, npm
+Ajax, GruntJS (testing development), npm
 
 
 

@@ -13,7 +13,11 @@ $(() => {
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)
+  $('#change-password-modal').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('click', authEvents.onSignOut)
+
+  $('#sign-in-form').on('submit', authEvents.onSignIn)
+  $('#sign-up-form').on('submit', authEvents.onSignUp)
 
   $('#new-game').on('click', gameEvents.onNewGame)
   $('#game-board').on('click', gameEvents.onClickGame)
