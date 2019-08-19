@@ -18,7 +18,6 @@ Ajax, GruntJS (testing development), npm
 
 There are no specific unsolved problems, however a list of upgrades that can be made to the game that would see fit for future iterations below:
 
-1. [ ] Automatic sign in after signing up
 2. [ ] Allowing custom markers rather than the traditional 'X's and 'O's
 3. [ ] Allowing users to see and select an unfinished game and pick back up where they left off
 4. [ ] Multiplayer functionality where different users can compete from different devices
