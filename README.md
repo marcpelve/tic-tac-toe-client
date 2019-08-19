@@ -49,4 +49,8 @@ There are no specific unsolved problems, however a list of upgrades that can be 
 
   ## Wireframes
 
+  ![First wireframe](Page_1.png)
+
+  ![Second wireframe](Page_2.png)
+
 </details>
