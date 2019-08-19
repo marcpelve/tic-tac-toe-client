@@ -24,7 +24,7 @@ const changePasswordSuccess = data => {
   messages.changeMessage('Successfully changed password', 'alert alert-primary')
 
   $('#modal-message').text('Successfully changed password')
-  $('#modal-message').show().delay(5000).fadeOut()
+  $('#modal-message').show().delay(3000).fadeOut()
 
   $('form').trigger('reset')
 }
@@ -33,7 +33,7 @@ const changePasswordFailure = data => {
   messages.changeMessage('Failure to change password', 'alert alert-danger')
 
   $('#modal-message').text('Failure to change password')
-  $('#modal-message').show().delay(5000).fadeOut()
+  $('#modal-message').show().delay(3000).fadeOut()
 }
 
 const signOutSuccess = data => {

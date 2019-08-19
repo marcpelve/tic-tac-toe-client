@@ -18,7 +18,7 @@ const onSignUp = event => {
 
   api.signUp(formData)
     .then(ui.signUpSuccess)
-    .then(signInUp)
+    .then(setTimeout(signInUp, 500))
     .catch(ui.failure)
 }
 
@@ -50,9 +50,14 @@ const onSignOut = event => {
     .catch(ui.failure)
 }
 
+const onClose = event => {
+  $('form').trigger('reset')
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
-  onSignOut
+  onSignOut,
+  onClose
 }

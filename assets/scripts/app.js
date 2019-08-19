@@ -22,6 +22,7 @@ $(() => {
 
   $('#sign-in-form').on('submit', authEvents.onSignIn)
   $('#sign-up-form').on('submit', authEvents.onSignUp)
+  $('#modal-close').on('click', authEvents.onClose)
 
   $('#new-game').on('click', gameEvents.onNewGame)
   $('#game-board').on('click', gameEvents.onClickGame)
