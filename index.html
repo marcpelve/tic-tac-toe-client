@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Example</title>
+  <title>Tic-Tac-Toe by Marc Pelve</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Do not add `link` tags-->
@@ -12,8 +12,18 @@
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
 </head>
 <body>
-  <h1>Tic-Tac-Toe</h1>
-  <h6>By Marc Pelve</h6>
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="d-md-flex d-block flex-row mx-md-auto mx-0">
+    <span class="navbar-brand">Tic-Tac-Toe</span>
+
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link disabled">Marc Pelve</a>
+        </li>
+      </ul>
+  </div>
+  </nav>
   <section>
     <br>
 
@@ -72,7 +82,7 @@
   </section>
 
   <div id="sign-up-in" class="row justify-content-center">
-    <form id='sign-up' class='col-5 form-group border toggle-off-sign-in' data-show="true">
+    <form id="sign-up" class="col-5 form-group border rounded toggle-off-sign-in space-out" data-show="true">
       <fieldset>
         <legend>Sign up</legend>
 
@@ -96,7 +106,7 @@
       </fieldset>
     </form>
 
-    <form id='sign-in' class="col-5 form-group border toggle-off-sign-in" data-show="true">
+    <form id='sign-in' class="col-5 form-group border rounded toggle-off-sign-in space-out" data-show="true">
       <fieldset>
         <legend>Sign in</legend>
 
@@ -131,17 +141,17 @@
 <br>
 <br>
 
-<div id="game-board" class="container toggle-on-new-game" data-show="false">
+<div id="game-board" class="container toggle-on-new-game restrict-game" data-show="false">
   <div class="row">
-    <div data-index="0" data-editable="true" class="col-4 box alt-color"></div>
-    <div data-index="1" data-editable="true" class="col-4 box alt-color"></div>
-    <div data-index="2" data-editable="true" class="col-4 box alt-color"></div>
-    <div data-index="3" data-editable="true" class="col-4 box alt-color"></div>
-    <div data-index="4" data-editable="true" class="col-4 box alt-color"></div>
-    <div data-index="5" data-editable="true" class="col-4 box alt-color"></div>
-    <div data-index="6" data-editable="true" class="col-4 box alt-color"></div>
-    <div data-index="7" data-editable="true" class="col-4 box alt-color"></div>
-    <div data-index="8" data-editable="true" class="col-4 box alt-color"></div>
+    <div data-index="0" data-editable="true" class="col-4 box alt-color top-left"></div>
+    <div data-index="1" data-editable="true" class="col-4 box alt-color top-middle"></div>
+    <div data-index="2" data-editable="true" class="col-4 box alt-color top-right"></div>
+    <div data-index="3" data-editable="true" class="col-4 box alt-color middle-left"></div>
+    <div data-index="4" data-editable="true" class="col-4 box alt-color middle-middle"></div>
+    <div data-index="5" data-editable="true" class="col-4 box alt-color middle-right"></div>
+    <div data-index="6" data-editable="true" class="col-4 box alt-color bottom-left"></div>
+    <div data-index="7" data-editable="true" class="col-4 box alt-color bottom-middle"></div>
+    <div data-index="8" data-editable="true" class="col-4 box alt-color bottom-right"></div>
   </div>
 
 </div>
