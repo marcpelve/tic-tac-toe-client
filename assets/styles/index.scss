@@ -2,12 +2,14 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 @import '~bootstrap/scss/bootstrap';
+// @import '~animate'
 
 $alt-color: $white;
 $body-bg-color: $gray-200;
 $font-color: $dark;
 $black: #000;
 $baby-powder-white: #fdfffc;
+$baby-powder-white-hover: #e3e3e3;
 $pastel-brown: #846a6a;
 
 
@@ -57,8 +59,12 @@ input {
   color: $font-color;
   display: flex;
   font-size: 60px;
-  height: 200px;
+  height: calc(100% / 3);
   justify-content: center;
+}
+
+.box:hover {
+  background-color: $baby-powder-white-hover;
 }
 
 .top-left {
@@ -118,7 +124,14 @@ input {
 }
 
 .restrict-game {
-  width: 50%;
+  width: 60vmin;
+  height: 60vmin;
+  margin: auto;
+  text-align: center;
+}
+
+.game-height {
+  height: 100%;
 }
 
 .spacer {
