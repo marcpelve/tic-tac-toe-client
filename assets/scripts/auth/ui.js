@@ -17,7 +17,7 @@ const signInSuccess = data => {
   $('.toggle-on-sign-in').show()
   $('.toggle-off-sign-in').hide()
 
-  $('form').trigger('reset')
+    $('form').trigger('reset')
 }
 
 const changePasswordSuccess = data => {
@@ -34,6 +34,8 @@ const changePasswordFailure = data => {
 
   $('#modal-message').text('Failure to change password')
   $('#modal-message').show().delay(3000).fadeOut()
+
+  $('form').trigger('reset')
 }
 
 const signOutSuccess = data => {
