@@ -22,6 +22,17 @@ const onSignUp = event => {
     .catch(ui.failure)
 }
 
+const onTestSignIn = event => {
+  event.preventDefault()
+
+  api.signIn({ credentials: {
+    email: 'testaccount@test.com',
+    password: 'test123'
+  }})
+    .then(ui.signInSuccess)
+    .catch(ui.failure)
+}
+
 const onSignIn = event => {
   event.preventDefault()
 
@@ -56,6 +67,7 @@ const onClose = event => {
 
 module.exports = {
   onSignUp,
+  onTestSignIn,
   onSignIn,
   onChangePassword,
   onSignOut,
